@@ -5,6 +5,7 @@
         <!-- Meta Tags -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <!-- Stylesheets -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <link rel="stylesheet" href="./resources/w3.css">
@@ -21,8 +22,8 @@
 
         <!-- Navbar (sit on top) -->
         <div class="w3-top">
-            <div class="w3-bar w3-white w3-card" id="myNavbar">
-                <a href="#home" class="w3-bar-item w3-wide w3-logo" id="logo"><img src="./resources/images/logo.png" alt="yoshi logo" width="60"></a>
+            <div class="w3-bar jav-navbar" id="myNavbar">
+                <a href="#home" class="w3-hide w3-logo" id="logo"><img src="./resources/images/logo.png" alt="yoshi logo" width="60"></a>
                 <!-- Right-sided navbar links -->
                 <div class="w3-right w3-hide-small">
                     <a href="#about" class="w3-bar-item w3-btn btn-about">ABOUT</a>
@@ -30,7 +31,7 @@
                     <a href="#pricing" class="w3-bar-item w3-btn btn-pricing"><i class="fa fa-usd"></i> PRICING</a>
                     <a href="#team" class="w3-bar-item w3-btn btn-team"><i class="fa fa-user"></i> TEAM</a>
                     <a href="#contact" class="w3-bar-item w3-btn btn-contact"><i class="fa fa-envelope"></i> CONTACT</a>
-                    <a href="#" class="w3-bar-item w3-btn btn-yoshi" style="border: 2px solid rgb(30,30,30);border-radius: 50px;" title="Coming soon!">Meet YOSHI!</a>
+                    <a href="#" class="w3-bar-item w3-btn btn-yoshi" style="border: 2px solid rgb(255,255,255);border-radius: 50px;" title="Coming soon!">Meet YOSHI!</a>
                 </div>
 
                 <!-- Hide right-floated links on small screens and replace them with a menu icon -->
@@ -54,10 +55,10 @@
         <!-- Header with full-height image -->
         <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
             <div class="w3-display-left w3-text-white" style="padding:48px">
-                <span class="w3-jumbo w3-hide-small" title="Coming soon!">YOSHI!</span><br>
-                <span class="w3-jumbo w3-hide-large w3-hide-medium" title="Coming soon!">YOSHI!</span><br>
-                <p><a href="#about" class="w3-button w3-hide-small w3-transparent w3-padding-large w3-large w3-margin-top w3-hover-opacity-off self-style-primary-btn"><b>Learn More</b></a></p>
-                <p><a href="#about" class="w3-button w3-hide-large w3-hide-medium w3-transparent w3-padding-large w3-small w3-margin-top w3-hover-opacity-off self-style-primary-btn"><b>Learn More</b></a></p>
+                <span class="w3-jumbo w3-hide-small w3-animate-bottom" title="Coming soon!">YOSHI!</span><br>
+                <span class="w3-jumbo w3-hide-large w3-hide-medium w3-animate-bottom" title="Coming soon!">YOSHI!</span><br>
+                <p><a href="#about" class="w3-button w3-hide-small w3-transparent w3-padding-large w3-large w3-margin-top w3-hover-opacity-off self-style-primary-btn w3-animate-bottom"><b>Learn More</b></a></p>
+                <p><a href="#about" class="w3-button w3-hide-large w3-hide-medium w3-transparent w3-padding-large w3-small w3-margin-top w3-hover-opacity-off self-style-primary-btn w3-animate-bottom"><b>Learn More</b></a></p>
             </div>
             <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
                 <a href="https://www.youtube.com/channel/UCjWBqKjCgfopOAfqv8xUc9g/featured" target="_blank"><i class="fa fa-youtube-play w3-hover-opacity" title="See us on Youtube"></i></a>
@@ -297,7 +298,7 @@
                 <a href="https://www.youtube.com/channel/UCjWBqKjCgfopOAfqv8xUc9g/featured" target="_blank"><i class="fa fa-youtube-play w3-hover-opacity" title="See us on Youtube"></i></a>
             </div>
             <br><hr>
-            <p>powered by: <a class="w3-hover-text-green" href="https://www.w3schools.com/w3css/default.asp">W3.CSS</a> & <a class="w3-hover-text-red" href="https://fonts.google.com/">Google Fonts</a> & <a class="w3-hover-text-indigo" href="https://formsubmit.co/" target="_blank">Formsubmit</a></p>
+            <p>powered by: <a class="w3-hover-text-green" href="https://www.w3schools.com/w3css/default.asp" target="_blank">W3.CSS</a> & <a class="w3-hover-text-red" href="https://fonts.google.com/" target="_blank">Google Fonts</a> & <a class="w3-hover-text-indigo" href="https://formsubmit.co/" target="_blank">Formsubmit</a></p>
             <p>&#169; 2021 YOSHI!</p><br>
         </footer>
         
@@ -327,7 +328,16 @@
                 mySidebar.style.display = "none";
             }
 
+            //Toggle transparent & solid navbar
+            $(window).scroll(function(){
+                $('#myNavbar').toggleClass('scrolled',$(this).scrollTop() > 430);
+                $('#myNavbar').toggleClass('w3-card',$(this).scrollTop() > 430);
+                $('#logo').toggleClass('w3-bar-item',$(this).scrollTop() > 430);
+                $('#logo').toggleClass('w3-hide',$(this).scrollTop() < 430);
+                $('.w3-btn').toggleClass('scrolled',$(this).scrollTop() > 430);
+                $('.fa-bars').toggleClass('w3-text-black',$(this).scrollTop() > 430);
+                $('.btn-yoshi').toggleClass('w3-border-dark-gray',$(this).scrollTop() > 430);
+            });
         </script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>
 </html>
