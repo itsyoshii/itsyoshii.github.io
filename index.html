@@ -69,58 +69,53 @@
         <div class="w3-container w3-dark-gray w3-text-white" style="padding:128px 16px" id="about">
             <h3 class="w3-center w3-xxlarge">YOUR AMAZING VIRTUAL BEST FRIEND &#x1F496</h3>
             <p class="w3-center"><i>YOSHI!</i> delivers something you can't get in normal chatbots</p>
-            <div class="w3-row-padding w3-center" style="margin-top:64px">
-                <div class="w3-third">
-                    <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
-                    <p class="w3-large">TALK ANYWHERE, ANYTIME</p>
-                    <p>With our online base, you don't need to worry to chat your friend anywhere, 24/7. <i>YOSHI!</i> is ready for you.</p>
+            <div id="carouselExampleCaptions" class="carousel slide pt-5" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
-                <div class="w3-third">
-                    <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
-                    <p class="w3-large">IT'S YOUR FRIEND, NOT YOURSELF</p>
-                    <p><i>YOSHI!</i> not only learns what you like, but it also learns something relevant to your likeness. You'll be perfect match!</p>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./resources/images/gif/anywhere.gif" class="d-block mx-auto" style="width: inherit; max-width: 400px;" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>TALK ANYWHERE, ANYTIME</h5>
+                      <p>With our online base, you don't need to worry to chat your friend anywhere, 24/7. <i>YOSHI!</i> is ready for you.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./resources/images/gif/complementary.gif" class="d-block mx-auto" style="width: inherit; max-width: 400px;" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>IT'S YOUR FRIEND, NOT YOURSELF</h5>
+                      <p><i>YOSHI!</i> not only learns what you like, but it also learns something relevant to your likeness. You'll be perfect match!</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./resources/images/gif/gossip.gif" class="d-block mx-auto" style="width: inherit; max-width: 400px;" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>ANTI-GOSSIP FRIENDSHIP</h5>
+                      <p>We understand and appreciate your privacy. So, we told <i>YOSHI!</i> to not spreading information about you.</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="w3-third">
-                    <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
-                    <p class="w3-large">ANTI-GOSSIP FRIENDSHIP</p>
-                    <p>We understand and appreciate your privacy. So, we told <i>YOSHI!</i> to not spreading information about you.</p>
-                </div>
-            </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
         </div>
 
         <!-- Sneak Peek Section -->
-        <div class="w3-container w3-dark-gray" style="padding:128px 16px" id="work">
+        <div class="w3-container w3-dark-gray" style="padding:128px 16px;" id="work">
             <h3 class="w3-center w3-xxlarge">OUR WORK SNEAK PEEKS</h3>
             <p class="w3-center">take a look at our work we've done</p>
-
-            <div class="w3-row-padding" style="margin-top:64px">
-                <div class=" w3-card w3-col l3 m6">
-                    <img src="./resources/images/sneak_cover.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Our project plan cover">
-                </div>
-                <div class="w3-card w3-col l3 m6">
-                    <img src="./resources/images/sneak_product overview.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Our product overviews">
-                </div>
-                <div class="w3-card w3-col l3 m6">
-                    <img src="./resources/images/sneak_SO.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Opinions on our product">
-                </div>
-                <div class="w3-card w3-col l3 m6">
-                    <img src="./resources/images/sneak_pricing.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Our estimated pricing">
-                </div>
-            </div>
-
-            <div class="w3-row-padding w3-section">
-                <div class="w3-card w3-col l3 m6">
-                    <img src="./resources/images/sneak_code1.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sneak code 1">
-                </div>
-                <div class="w3-card w3-col l3 m6">
-                    <img src="./resources/images/sneak_code2.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sneak code 2">
-                </div>
-                <div class="w3-card w3-col l3 m6">
-                    <img src="./resources/images/sneak_code3.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sneak code 3">
-                </div>
-                <div class="w3-card w3-col l3 m6">
-                    <img src="./resources/images/sneak_code4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sneak code 4">
-                </div>
+            
+            <div class="iframe-container mx-auto">
+                <iframe class="w3-margin-top" src="https://www.youtube.com/embed/Jgp8xyBdVJA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
 
@@ -180,23 +175,23 @@
             <div class="w3-row-padding" style="margin-top:64px">
                 <div class="w3-quarter l3 m6 w3-margin-bottom">
                     <div class="w3-card w3-rounded w3-white">
-                        <img class="w3-rounded" src="./resources/images/team2.jpg" alt="Shereen Sianturi" style="width:100%">
+                        <img class="w3-rounded" src="./resources/images/shereen.png" alt="Shereen Sianturi" style="width:100%">
                         <div class="w3-container">
                             <h3>Shereen Sianturi</h3>
                             <p class="w3-opacity">CEO</p>
                             <p>A student from SMA Unggul Del. Class XI PMIA 1.</p><br>
-                            <p><i>"Put your life saying here"</i></p><br><br>
+                            <p><i>"Never regret. If it's good, it's wonderful. If it's bad, it's experience"</i></p><br>
                         </div>
                     </div>
                 </div>
                 <div class="w3-quarter l3 m6 w3-margin-bottom">
                     <div class="w3-card w3-rounded w3-white">
-                        <img class="w3-rounded" src="./resources/images/team2.jpg" alt="Yolanda Tamba" style="width:100%">
+                        <img class="w3-rounded" src="./resources/images/yolanda.png" alt="Yolanda Tamba" style="width:100%">
                         <div class="w3-container">
                             <h3>Yolanda Tamba</h3>
                             <p class="w3-opacity">Manager</p>
                             <p>A student from SMA Unggul Del. Class XI PMIA 1.</p><br>
-                            <p><i>"Put your life saying here"</i></p><br><br>
+                            <p><i>"Discipline in action begins with discipline by the mind"</i></p><br>
                         </div>
                     </div>
                 </div>
@@ -339,5 +334,6 @@
                 $('.btn-yoshi').toggleClass('w3-border-dark-gray',$(this).scrollTop() > 430);
             });
         </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>
 </html>
